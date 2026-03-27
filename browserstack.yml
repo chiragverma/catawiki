@@ -1,0 +1,18 @@
+userName: ${BROWSERSTACK_USERNAME}
+accessKey: ${BROWSERSTACK_ACCESS_KEY}
+
+projectName: Catawiki E2E Tests
+buildName: playwright-run
+buildIdentifier: '#${BUILD_NUMBER}'
+
+platforms:
+  - os: Windows
+    osVersion: 11
+    browserName: chrome
+    browserVersion: latest
+
+parallelsPerPlatform: 1
+
+browserstackLocal: false
+
+testReporting: true
