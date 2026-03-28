@@ -90,6 +90,7 @@ export class CatawikiPage {
   async waitForSearchResults(query: string) {
     await expect(this.lotCards.first()).toBeVisible();
     await expect(this.page).toHaveURL(new RegExp(`q=${query}`, 'i'));
+    await expect(this.searchInput).toHaveValue(query);
   }
 
   async getLotCardTitle(index: number): Promise<string> {
